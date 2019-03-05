@@ -20,6 +20,8 @@
  * Javascript code in this page
  */
 
+console.log('.INIT CUSTOM PDF.JS 2');
+
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
 		module.exports = factory();
@@ -6060,6 +6062,10 @@ var BaseViewer = function () {
   }, {
     key: 'forceRendering',
     value: function forceRendering(currentlyVisiblePages) {
+      if (window.renderBlock) {
+        console.log('.block forceRendering');
+        return;
+      }
       var _this4 = this;
 
       var visiblePages = currentlyVisiblePages || this._getVisiblePages();
@@ -6448,6 +6454,10 @@ var PDFViewer = function (_BaseViewer) {
   }, {
     key: 'update',
     value: function update() {
+      if (window.renderBlock) {
+        console.log('.block update');
+        return;
+      }
       var visible = this._getVisiblePages();
       var visiblePages = visible.views,
           numVisiblePages = visiblePages.length;
