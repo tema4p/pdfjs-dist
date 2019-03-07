@@ -5467,7 +5467,7 @@ var _text_layer_builder = __w_pdfjs_require__(10);
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-var DEFAULT_CACHE_SIZE = 10;
+var DEFAULT_CACHE_SIZE = 1000;
 var ScrollMode = {
   VERTICAL: 0,
   HORIZONTAL: 1,
