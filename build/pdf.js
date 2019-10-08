@@ -14963,6 +14963,8 @@ var renderTextLayer = function renderTextLayerClosure() {
   var styleBuf = ['left: ', 0, 'px; top: ', 0, 'px; font-size: ', 0, 'px; font-family: ', '', ';'];
   function appendText(task, geom, styles) {
     var textDiv = document.createElement('div');
+    textDiv.geom = geom;
+    textDiv.geom.styles = styles;
     var textDivProperties = {
       style: null,
       angle: 0,
